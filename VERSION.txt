@@ -1,4 +1,4 @@
-CEN Exodus-Wilderness Matrix v1.9
-- Button font weight softened for better Korean text fit
-- Button rows fine-tuned from mobile capture
-- Relative percentage placement preserved for consistent mobile rendering
+v1.10 / 2026-06-02
+- 3번 버튼 위치 유지
+- 4번 광야훈련 버튼 하단 이동
+- 5번 모압평지 버튼 하단 이동

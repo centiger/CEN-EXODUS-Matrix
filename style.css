@@ -217,3 +217,12 @@
   .btnGroup button{font-size:11.4px !important;}
   .g3 button{font-size:9.8px !important;}
 }
+
+/* v2.0: preserve row 3; move row 4 and 5 below the main scene focus as requested */
+.g3{top:55.38% !important;width:58.5% !important;right:.65% !important;}
+.g4{top:74.35% !important;width:46.5% !important;right:1.45% !important;}
+.g5{top:88.15% !important;width:45.5% !important;right:1.15% !important;}
+@media(max-width:430px){
+  .g4{top:74.35% !important;width:48% !important;right:1.2% !important;}
+  .g5{top:88.15% !important;width:47% !important;right:.85% !important;}
+}
