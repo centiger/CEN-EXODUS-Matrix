@@ -1,1 +1,4 @@
-v1.12 / 2026-06-03
+CEN Exodus-Wilderness Matrix v1.13
+- Fixed main screen vertical scrolling on mobile
+- Disabled full-width transparent event hotspots that blocked drag gestures
+- Preserved visible hub/flow buttons and fixed footer
