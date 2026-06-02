@@ -1,4 +1,4 @@
-CEN Exodus-Wilderness Matrix v1.8
-- top header fade refined
-- title breathing room improved
-- button rows detail-adjusted
+CEN Exodus-Wilderness Matrix v1.9
+- Button font weight softened for better Korean text fit
+- Button rows fine-tuned from mobile capture
+- Relative percentage placement preserved for consistent mobile rendering
