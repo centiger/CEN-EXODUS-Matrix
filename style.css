@@ -534,3 +534,21 @@ body {
 .toast{
   bottom: calc(var(--footer-h) + 12px) !important;
 }
+
+/* v1.19: stop main scroll at the natural end of the matrix image.
+   The previous large stage margin was useful for testing lower button placement,
+   but it allowed the user to drag too far past the Moab panel. */
+.phone.main-content{
+  padding-bottom: 0 !important;
+  scroll-padding-bottom: 0 !important;
+}
+.stage{
+  margin-bottom: 0 !important;
+}
+/* Keep translated lower buttons visible without creating a large extra scroll tail. */
+.g4{ transform: translateY(clamp(30px, 8.0vw, 50px)) !important; }
+.g5{ transform: translateY(clamp(18px, 5.0vw, 34px)) !important; }
+@media(max-width:430px){
+  .g4{ transform: translateY(clamp(28px, 8.2vw, 48px)) !important; }
+  .g5{ transform: translateY(clamp(16px, 5.2vw, 32px)) !important; }
+}
