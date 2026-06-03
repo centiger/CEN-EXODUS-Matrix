@@ -586,3 +586,25 @@ body {
   .g5{transform:translateY(clamp(40px, 10.8vw, 66px)) !important;}
   .stage{margin-bottom:clamp(20px, 5.8vw, 32px) !important;}
 }
+
+/* v1.21: Moab row final adjustment
+   Move only row 5 farther down to clear Moses/people and sit over the lower river/valley area.
+   Rows 1-4 remain as approved in v1.20. */
+.g5{
+  top: 93.35% !important;
+  right: 1.0% !important;
+  width: 46.5% !important;
+  transform: translateY(clamp(78px, 18.8vw, 118px)) !important;
+}
+/* keep just enough room so the lowered Moab buttons are reachable, without creating a sloppy long tail */
+.stage{
+  margin-bottom: clamp(54px, 13.2vw, 82px) !important;
+}
+@media(max-width:430px){
+  .g5{
+    right: .7% !important;
+    width: 48% !important;
+    transform: translateY(clamp(74px, 19.2vw, 112px)) !important;
+  }
+  .stage{margin-bottom:clamp(50px, 13.6vw, 78px) !important;}
+}
