@@ -1,4 +1,3 @@
-CEN Exodus-Wilderness Matrix v1.16
-- Fixed main matrix drag/scroll by converting main screen into an independent vertical scroll pane above the fixed footer.
-- Disabled invisible event hotspot layers that could block touch scrolling.
-- Preserved visible button clicks and current background/button layout.
+CEN Exodus Wilderness Matrix v1.17
+- button placement adjusted to user marked lower zones
+- main scroll retained
