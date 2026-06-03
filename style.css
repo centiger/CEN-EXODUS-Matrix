@@ -325,46 +325,27 @@ body { touch-action: pan-y !important; }
   .g5{top:89.4% !important;width:47% !important;right:.85% !important;}
 }
 
-/* v1.13 REAL scroll fix: transparent row hotspots were intercepting vertical drag */
-html, body {
-  margin: 0 !important;
-  width: 100% !important;
-  min-height: 100% !important;
-  height: auto !important;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch !important;
-  touch-action: pan-y !important;
-  overscroll-behavior-y: auto !important;
-}
-body {
-  position: static !important;
-}
-.app,
-.phone,
-.main-content {
-  height: auto !important;
-  min-height: 100svh !important;
-  overflow: visible !important;
-  touch-action: pan-y !important;
-}
-.stage {
-  overflow: visible !important;
-  touch-action: pan-y !important;
-}
-/* These full-width invisible buttons covered each scene and blocked drag on mobile. */
-.hot.event {
+/* v1.15 final override: button rows follow user's marked bottom zones; only visible buttons receive touch events */
+.event.hot{
   pointer-events: none !important;
-  touch-action: pan-y !important;
 }
-/* Visible buttons remain clickable, but do not block page scrolling outside tap. */
-.btnGroup,
-.btnGroup button,
-.fixedFooter,
-.navGrid button {
-  touch-action: manipulation !important;
+.btnGroup{
+  pointer-events: auto !important;
 }
-/* Make sure the last Moab band can clear the fixed footer when scrolled. */
-.main-content {
-  padding-bottom: calc(var(--footer-h) + env(safe-area-inset-bottom) + 72px) !important;
+/* 1st row stays in first panel lower-right */
+.g1{top:21.05% !important;right:2.1% !important;width:38.5% !important;}
+/* 2nd row moved down to the open sea-floor area marked by user */
+.g2{top:40.35% !important;right:1.8% !important;width:54.5% !important;}
+/* 3rd row intentionally preserved: lowering would cover the tabernacle */
+.g3{top:55.38% !important;right:.65% !important;width:58.5% !important;}
+/* 4th row moved clearly into the lower open ground area */
+.g4{top:78.70% !important;right:1.2% !important;width:47.5% !important;}
+/* 5th row moved into lower valley area, above the core-flow box */
+.g5{top:93.35% !important;right:1.0% !important;width:46.5% !important;}
+@media(max-width:430px){
+  .g1{top:21.05% !important;right:1.8% !important;width:40% !important;}
+  .g2{top:40.35% !important;right:1.4% !important;width:56% !important;}
+  .g3{top:55.38% !important;right:.5% !important;width:60% !important;}
+  .g4{top:78.70% !important;right:.9% !important;width:49% !important;}
+  .g5{top:93.35% !important;right:.7% !important;width:48% !important;}
 }
