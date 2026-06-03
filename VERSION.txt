@@ -1,3 +1,4 @@
-CEN Exodus Wilderness Matrix v1.17
-- button placement adjusted to user marked lower zones
-- main scroll retained
+CEN Exodus-Wilderness Matrix v1.18
+- Compact fixed footer height
+- Main scroll bottom recalculated
+- Ready for hub phase
