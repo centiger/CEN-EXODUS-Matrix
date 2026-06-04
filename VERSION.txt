@@ -1,2 +1,2 @@
-CEN Exodus-Wilderness Matrix v1.24
-- Moab Plains hub map and content integrated
+CEN Exodus-Wilderness Matrix v1.26
+- Oppression hub map and full 5-hub integration completed
