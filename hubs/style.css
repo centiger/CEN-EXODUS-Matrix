@@ -4,3 +4,10 @@
 /* v1.22 hub list modal */
 .listModal{position:fixed;inset:0;background:rgba(0,0,0,.58);display:none;align-items:flex-end;justify-content:center;z-index:50;padding:0 10px calc(86px + env(safe-area-inset-bottom));}
 .listModal.show{display:flex}.listPanel{width:100%;max-width:760px;background:linear-gradient(180deg,rgba(21,25,30,.98),rgba(5,9,13,.98));border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 -22px 50px rgba(0,0,0,.5);position:relative}.listPanel h2{margin:0 44px 14px 0;color:var(--gold);font-size:22px}.listClose{position:absolute;right:14px;top:12px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:22px}.hubList{display:grid;gap:8px}.hubItem{width:100%;text-align:left;border:1px solid rgba(242,199,111,.28);background:rgba(255,255,255,.06);color:#f7efe0;border-radius:14px;padding:12px 14px;font-weight:900}.hubItem small{display:block;color:#f4d28b;font-weight:700;margin-top:3px}.mapCard img{background:#0b1720}.mapText::before{content:'지도설명문';display:inline-block;margin-right:8px;padding:2px 7px;border-radius:999px;background:rgba(242,199,111,.15);border:1px solid rgba(242,199,111,.28);font-size:12px;color:#ffe3a4}.card.message{grid-column:1/-1}.card{box-shadow:0 8px 24px rgba(0,0,0,.18)}
+
+
+/* v1.27: hub map-first layout and normal-weight map description */
+.mapCard.mapFirst{overflow:hidden;}
+.mapCard.mapFirst img{border-bottom:1px solid rgba(242,199,111,.18);}
+.mapCard.mapFirst .mapText{border-bottom:0;border-top:0;padding:14px 15px 16px;color:#f2dfb4;font-weight:400;line-height:1.62;font-size:15px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(0,0,0,.08));}
+.mapText::before{font-weight:650;}
