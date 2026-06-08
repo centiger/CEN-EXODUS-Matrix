@@ -131,9 +131,22 @@
       const group = btn.closest('.button-set');
       const eventName = group.dataset.event;
       const kind = btn.dataset.kind;
-      const label = kind === 'hub' ? `${eventName} 허브` : kind === 'link' ? `${eventName} 연결탐험` : `${eventName} 통합탐험`;
+      const hubMap = {
+        '요단강 도하': 'jordan',
+        '여리고 함락': 'jericho',
+        '가나안 정복': 'conquest',
+        '기업 분배': 'inheritance',
+        '세겜 언약': 'shechem'
+      };
+      if (kind === 'hub') {
+        location.href = `hubs/index.html?hub=${hubMap[eventName] || 'jordan'}`;
+        return;
+      }
+      const label = kind === 'link' ? `${eventName} 연결탐험` : `${eventName} 통합탐험`;
       dialogTitle.textContent = label;
-      dialogText.textContent = '정복시대 Matrix 1.0 위치 확인용 임시 창입니다. 다음 단계에서 실제 허브 페이지와 탐험 내용을 연결합니다.';
+      dialogText.textContent = eventName === '요단강 도하'
+        ? '요단강 도하 허브가 먼저 통합되었습니다. 연결탐험과 통합탐험 상세창은 허브 표준 확정 후 연결합니다.'
+        : '해당 탐험은 다음 단계에서 실제 내용으로 연결합니다.';
       dialog.showModal();
     });
   });
