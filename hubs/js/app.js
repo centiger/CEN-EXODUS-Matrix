@@ -2,7 +2,7 @@ const HUBS = [
   {
     id:'jordan', icon:'🌊', title:'요단강 도하 허브', subtitle:'약속의 땅으로 들어가는 믿음의 첫걸음',
     theme:'하나님은 요단강을 멈추시고 언약 백성을 약속의 땅으로 인도하시며, 광야 시대를 끝내고 정복 시대를 시작하게 하신다.',
-    map:'assets/jordan-map.svg',
+    map:'assets/jordan-map.png',
     mapText:'이스라엘 백성은 싯딤에서 출발하여 언약궤를 앞세우고 요단강을 건넌 뒤 길갈에 진을 쳤다. 길갈은 가나안 정복의 첫 전진기지가 되었고, 이후 여리고 함락으로 정복 여정이 이어졌다.',
     verse:'“내가 오늘부터 시작하여 너를 온 이스라엘의 목전에서 크게 하여 내가 모세와 함께 있었던 것 같이 너와 함께 있는 것을 그들이 알게 하리라.”<br><strong>여호수아 3:7</strong>',
     events:['여호수아가 모세의 뒤를 이어 지도자로 세워짐','언약궤를 멘 제사장들이 요단강에 먼저 들어섬','하나님께서 요단강 물을 멈추심','온 백성이 마른 땅으로 강을 건넘','열두 돌을 세워 하나님의 구원을 기억하게 함','길갈에 진을 치고 가나안 정복을 시작함'],
@@ -34,7 +34,7 @@ function render(id){
   document.getElementById('subtitle').textContent=h.subtitle||'';
   document.getElementById('theme').textContent=h.theme||'';
   const map=document.getElementById('map');
-  map.src=h.map||'assets/jordan-map.svg';
+  map.src=h.map||'assets/jordan-map.png';
   document.getElementById('mapText').textContent=h.mapText||'지도와 설명은 다음 단계에서 보완합니다.';
   document.getElementById('verse').innerHTML=h.verse||'대표성구는 다음 단계에서 입력합니다.';
   fillList('events',h.events); fillList('meaning',h.meaning); fillList('connections',h.connections); fillList('integrated',h.integrated); fillList('refs',h.refs);

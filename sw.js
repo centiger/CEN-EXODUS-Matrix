@@ -1,4 +1,4 @@
-const CACHE = 'cen-conquest-matrix-v10';
+const CACHE = 'cen-conquest-matrix-v11-linkfix';
 const ASSETS = [
   './',
   './index.html',
@@ -11,7 +11,7 @@ const ASSETS = [
   './hubs/index.html',
   './hubs/style.css',
   './hubs/js/app.js',
-  './hubs/assets/jordan-map.svg'
+  './hubs/assets/jordan-map.png'
 ];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
@@ -23,5 +23,5 @@ self.addEventListener('activate', event => {
 });
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
-  event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request)));
+  event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
 });

@@ -79,7 +79,7 @@
   }
 
   viewport.addEventListener('pointerdown', (e) => {
-    if (e.target.closest('button')) return;
+    if (e.target.closest('button, a')) return;
     e.preventDefault();
     viewport.setPointerCapture(e.pointerId);
     pointers.set(e.pointerId, e);
@@ -131,17 +131,6 @@
       const group = btn.closest('.button-set');
       const eventName = group.dataset.event;
       const kind = btn.dataset.kind;
-      const hubMap = {
-        '요단강 도하': 'jordan',
-        '여리고 함락': 'jericho',
-        '가나안 정복': 'conquest',
-        '기업 분배': 'inheritance',
-        '세겜 언약': 'shechem'
-      };
-      if (kind === 'hub') {
-        location.href = `hubs/index.html?hub=${hubMap[eventName] || 'jordan'}`;
-        return;
-      }
       const label = kind === 'link' ? `${eventName} 연결탐험` : `${eventName} 통합탐험`;
       dialogTitle.textContent = label;
       dialogText.textContent = eventName === '요단강 도하'
@@ -153,9 +142,11 @@
 
   document.querySelectorAll('.footer button').forEach(btn => {
     btn.addEventListener('click', () => {
+      const key = btn.dataset.footer;
+      if (key === 'hub') { location.href = 'hubs/index.html?hub=jordan'; return; }
       const label = btn.textContent.trim();
       dialogTitle.textContent = label;
-      dialogText.textContent = '첫 버전에서는 하단 메뉴가 메인 이미지와 분리되어 고정되는지 확인합니다. 실제 링크는 다음 단계에서 연결합니다.';
+      dialogText.textContent = '이 메뉴의 실제 링크는 다음 단계에서 연결합니다.';
       dialog.showModal();
     });
   });
